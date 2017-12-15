@@ -1,0 +1,82 @@
+.bg-panel{
+	background-image: url(../img/bg-panel.png);
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	margin: 0;
+}
+.bg-panel ul{
+	list-style: none;
+}
+.no-margin-top{
+	margin-top: 0;
+}
+
+
+#fondo-libro .item-media{
+	text-align: center;
+	vertical-align: middle;
+	padding: 20px 0px;
+	
+}
+
+#synopsis h3{
+	font-size: 20px;
+	text-align: center;
+}
+
+.descripcion{
+background-color: #673ab7;
+background-size: cover;
+	
+}
+
+.button-round{
+	background-color: #fff;
+	padding-right: 10px;
+}
+
+#synopisis p{
+	text-align: left;
+	
+}
+
+.btns{
+	
+}
+
+#fondo-libro img{
+	box-shadow: 0px 0px 30px #ccc;
+	max-width: 100%
+}
+
+
+#texto h2, h3{
+	color: #fff;
+	text-shadow: 1px 1px 1px #ccc; 
+	margin-bottom: -10px;	
+}
+
+
+
+#texto h4{
+	color: #fff;
+	text-shadow: 1px 1px 1px #ccc; 
+	margin-bottom: -6px;
+	font-style: normal;
+}
+
+#texto #stars{
+	padding-top: 8px;
+	color: #fff;
+	margin-bottom: -5px;
+}
+
+#synopsis h3{
+	color: #111;
+	text-shadow: 1px 1px 1px #ccc; 
+	margin-bottom: -3px;
+	font-style: normal;
+	margin-top: 5px;
+}

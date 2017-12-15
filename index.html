@@ -1,0 +1,160 @@
+<!doctype html>
+<html ng-app="ngApp">
+<head>
+<meta charset="utf-8">
+<title>Libros Diseño Web II</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<link href="css/framework7.material.min.css" rel="stylesheet">
+<link href="css/framework7.material.colors.min.css" rel="stylesheet">
+<link href="css/material-icons.css" rel="stylesheet">
+<link href="css/my-app.css" rel="stylesheet">
+
+
+</head>
+
+<body class="theme-deeppurple" ng-controller="appController as appc" ng-cloak>
+
+	<div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+	<div class="panel panel-left panel-reveal">
+		  <div class="content-block">
+			<div class="content-block-inner">
+				<a href="index.html">Inicio</a>
+			</div>
+			  <div class="content-block-inner">
+				<a href="#">Carrito</a>
+			</div>
+			  <div class="content-block-inner">
+				<a href="#">Lista de deseos</a>
+			</div>
+			  <div class="content-block-inner">
+				  <a href="#">Configuración</a>
+			</div>
+			  <div class="content-block-inner">
+				<a href="#">Cerrar sesión</a>
+			</div>
+		  </div>	
+	</div>
+
+		<div class="views">
+			<div class="view view-main">
+				
+				<div class="pages navbar-fixed">
+					<div class="page" data-page="index">
+						
+						<div class="navbar">
+							<div class="navbar-inner">
+								<div class="left"><a href="#" class="link open-panel"><em class="material-icons">menu</em></a></div>
+								<div class="center">
+									{{title}}
+								</div>
+								
+							</div>
+						</div><!--nav-->
+						
+						<form class="searchbar searchbar-init" data-search-list=".search" data-search-in=".item-content">
+							<div class="searchbar-input">
+								<input type="search" placeholder="Buscar aquí">
+								<a href="#" class="searchbar-clear"></a>
+							</div>
+							<a href="#" class="searchbar-cancer"></a>
+						</form>
+						<div class="searchbar-overlay"></div>
+					
+					
+					
+						<div class="page-content">
+																		
+														
+							<div class="content-block-title">
+								
+							</div>
+							<!--sección 2-->	
+							<section class="content-block search">
+								<div ng-if="appc.libros.length == 0" class="content-block-title">
+									<h3>Lo sentimos, no hay libros disponibles.</h3>
+								</div>
+							
+								<div class="list-block media-list">
+									<ul ng-repeat="item in appc.libros">
+										<li>
+											<a href="info.html" ng-click="setIsbn(item.isbn)" class="item-link">
+												<div class="item-content">
+													<div class="item-media">
+														<img src="{{item.imagen}}" width="100px">
+													</div>
+													<div class="item-inner">
+														<div class="item-title">
+															{{item.nombre}}
+														</div>
+														<div class="item-subtitle">
+															{{item.autor}} 
+														</div>
+														<div class="item-text">
+															{{item.sinopsis}}
+															<br><b>{{item.precio | currency:"L. "}}</b>
+														</div>
+													</div>
+
+												</div>
+											</a>
+										</li>
+										
+										
+											
+									</ul>
+								</div>
+							</section>
+
+												
+																						
+						</div> <!--page content-->
+						<div class="speed-dial">
+							<!-- FAB inside will open Speed Dial Action-->
+							<a href="#" class="floating-button">
+								<!--First icon is visible when Speed Dial actions are closed-->
+								<i class="icon icon-plus"></i>
+								<!--Second icon is visible when Speed Dial actions are opened-->
+								<i class="icon icon-close"></i>
+							</a>
+							<!--Speed Dial Actions-->
+							<div class="speed-dial-buttons">
+								<!--First Speed Dial button-->
+								<a href="#">
+									<i class="material-icons">note_add</i>
+								</a>
+								<!--Second Speed Dial button-->
+								<a href="#">
+									<i class="material-icons">search</i>
+								</a>
+								<!--Third Speed Dial button-->
+								<a href="#">
+									<i class="material-icons">navigation</i>
+								</a>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>		
+				
+				
+		</div>
+
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/framework7.min.js"></script>
+		<script src="js/framework7.angular.hook.js"></script>
+	
+	
+	<script src="js/my-app.js"></script>
+		
+	<script src="js/app.js"></script>
+
+</body>
+</html>
+
